@@ -1,0 +1,22 @@
+# Recuerda, para realizar merge a la rama develop, es importante:
+# - Que el origen sea la rama feature/*, y en regresión sería bugfix/* o hotfix/*
+# - El merge solo se va a poder completar con las aprobaciones de los reviewers.
+# - Y que tenga 3 aprobaciones por los reviewers, quienes son accountability de la rama develop.
+
+name: Validacion Pull Request a develop
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  validar-origen-develop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validacion origen del pull request a develop
+        run: |
+          if [[ ! $GITHUB_HEAD_REF =~ ^feature/.*$ && ! $GITHUB_HEAD_REF =~ ^hotfix/v\d+\.\d+\.\d+(-[a-zA-Z0-9-]+)?$ && ! $GITHUB_HEAD_REF =~ ^bugfix/.*$ ]]; then
+            echo "El pull request a develop debe tener como origen una rama feature/*, y en regresión sería bugfix/* y hotfix/*"
+            exit 1
+          fi

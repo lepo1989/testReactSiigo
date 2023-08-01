@@ -1,0 +1,26 @@
+# Aprobadores de los pull request al repositorio.
+*   @Siigo-DevSecOps/secops-reviewers @Siigo-DevSecOps/vps
+
+# Propietarios del archivo CODEOWNERS
+/.github/CODEOWNERS   @Siigo-DevSecOps/secops
+
+# Propietarios de la rama master
+# main/*   @Siigo-DevSecOps/secops-delivery
+
+# Propietarios de la rama qa
+# release/*   @Siigo-DevSecOps/secops-qa
+
+# Aprobadores requeridos para la rama dev
+# develop/*   @Siigo-DevSecOps/secops-reviewers
+
+# Propietarios de los archivos de configuración de GitHub Actions
+/.github/workflows/*.yml   @Siigo-DevSecOps/sre-devops-cloud @Siigo-DevSecOps/sre-devops-legacy @Siigo-DevSecOps/secops
+
+# Propietarios del directorio .harness/
+# /.harness/   @Siigo-DevSecOps/sre-devops-cloud @Siigo-DevSecOps/sre-devops-legacy
+
+# Propietarios del directorio .docker/
+# /.docker/   @Siigo-DevSecOps/sre-devops-cloud @Siigo-DevSecOps/sre-devops-legacy
+
+# Propietarios del directorio .docker/
+# /.devcontainer/   @Siigo-DevSecOps/sre-devops-cloud @Siigo-DevSecOps/sre-devops-legacy

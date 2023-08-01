@@ -1,0 +1,21 @@
+# Recuerda, para realizar merge a la rama release, es importante:
+# - Que el origen sea la rama develop.
+# - Y que tenga 3 aprobación por los reviewers, QA son son accountability de la rama release.
+
+name: Validacion pull request a release
+
+on:
+  pull_request:
+    branches:
+      - release/*
+
+jobs:
+  validar-origen-release-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validacion origen del pull request a release/*
+        run: |
+          if [[ ! $GITHUB_HEAD_REF =~ ^develop$ && ! $GITHUB_HEAD_REF =~ ^bugfix/.*$ ]]; then
+            echo "El pull request a la rama release solo debe tener como origen la rama develop y bugfix/*"
+            exit 1
+          fi

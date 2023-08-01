@@ -1,0 +1,23 @@
+# Recuerda, para realizar merge a la rama main, es importante:
+# - Que el origen sea la rama release/vX.X.X o hotfix/vX.X.X.
+# - Y es necesario que tenga el tag de git con la versión del release.
+# - El merge solo lo va a poder completar el equipo de delivery.
+# - Y que tenga 1 aprobación por el team de delivery quienes son accountability de la rama main; y 1 aprobación del equipo de desarrollo.
+
+name: Validacion Pull Request a main Producción
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validar-origen-y-version-main-produccion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validar origen del pull request a main
+        run: |
+          if [[ ! $GITHUB_HEAD_REF =~ ^release/v\d+\.\d+\.\d+(-[a-zA-Z0-9-]+)?$ && ! $GITHUB_HEAD_REF =~ ^hotfix/v\d+\.\d+\.\d+(-[a-zA-Z0-9-]+)?$ ]]; then
+            echo "El pull request a la rama main (producción) debe tener como origen una rama release/vX.X.X o hotfix/vX.X.X"
+            exit 1
+          fi
