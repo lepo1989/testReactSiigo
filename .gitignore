@@ -92,6 +92,8 @@ BenchmarkDotNet.Artifacts/
 
 # .NET Core
 project.lock.json
+package-lock.json
+yarn.lock
 project.fragment.lock.json
 artifacts/
 
