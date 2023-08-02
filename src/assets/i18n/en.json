@@ -1,0 +1,23 @@
+{
+    "Phone": "Phone",
+    "Names": "Names",
+    "GetIn": "Get in",
+    "andOur": "and our",
+    "Surnames": "Surnames",
+    "Continue": "Continue",
+    "SiigoLogo": "logo Siigo",
+    "DataPolicy": "Data policy",
+    "WeAreSorry": "We are sorry",
+    "SelectYourJob": "Select your job",
+    "UserActivation": "User activation",
+    "UsersActivation": "Users activation",
+    "TermsAndConditions": "Terms and conditions",
+    "ActivationFailed": "Activation process failed",
+    "ExpiredInvitation": "The invitation has expired",
+    "EmailAccessData": "We send you an email with the access data.",
+    "FormIsNoAvailable": "The registration form is no longer available",
+    "AcceptButtonMessage": "By clicking the button you are accepting the",
+    "RefillFormMessage": "Fill out the form again and continue with your user activation.",
+    "SuccessfulDataSent": "The data has been sent successfully and your user has been activated correctly.",
+    "MessageRequiredData": "These data are necessary for the creation and activation of your user in the company."
+}
