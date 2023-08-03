@@ -12,6 +12,7 @@
     "UserActivation": "Activación de usuario",
     "UsersActivation": "Activación de usuarios",
     "TermsAndConditions": "Términos y condiciones",
+    "RequiredMsg": "Por favor completa este campo",
     "ExpiredInvitation": "La invitación ha expirado",
     "ActivationFailed": "El proceso de activación fallo",
     "EmailAccessData": "Te enviamos un correo con los datos de acceso.",
