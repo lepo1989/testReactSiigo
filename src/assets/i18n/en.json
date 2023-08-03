@@ -11,6 +11,7 @@
     "SelectYourJob": "Select your job",
     "UserActivation": "User activation",
     "UsersActivation": "Users activation",
+    "RequiredMsg":"Please complete this field",
     "TermsAndConditions": "Terms and conditions",
     "ActivationFailed": "Activation process failed",
     "ExpiredInvitation": "The invitation has expired",
